@@ -1,0 +1,25 @@
+<h1>Listing tines</h1>
+
+<table>
+  <tr>
+    
+    <th>Tiny</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tines.each do |tine| %>
+  <tr>
+    <td><a href="<%= tine.url %>"> <%= tine.tiny  %></a></td>
+    <td><%= link_to tine.tiny  %></td>
+    <td><%= link_to 'Show', tine %></td>
+    <td><%= link_to 'Edit', edit_tine_path(tine) %></td>
+    <td><%= link_to 'Destroy', tine, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tine', new_tine_path %>
