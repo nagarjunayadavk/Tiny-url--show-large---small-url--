@@ -8,7 +8,6 @@
     <th></th>
     <th></th>
   </tr>
-
 <% @tines.each do |tine| %>
   <tr>
     <td><a href="<%= tine.url %>"> <%= tine.tiny  %></a></td>
@@ -19,7 +18,6 @@
   </tr>
 <% end %>
 </table>
-
 <br />
 
 <%= link_to 'New Tine', new_tine_path %>
